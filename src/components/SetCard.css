@@ -1,0 +1,155 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem 1.15rem;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.06);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgb(0 0 0 / 0.1);
+}
+
+.card--building {
+  border-inline-start: 4px solid #2563eb;
+}
+
+.card--empty {
+  border-inline-start: 4px solid #d1d5db;
+}
+
+.card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.badge {
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.badge--building {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.badge--empty {
+  background: #f3f4f6;
+  color: #4b5563;
+}
+
+/* --- רשימת פריטים --- */
+.card__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.card__item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0;
+  border-bottom: 1px dashed #f3f4f6;
+}
+
+.card__item-price {
+  color: #374151;
+  font-variant-numeric: tabular-nums;
+}
+
+.card__empty-msg {
+  margin: 0;
+  padding: 0.75rem 0;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+/* --- סך הכל --- */
+.card__total {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.card__total strong {
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- כפתורים של הכרטיס --- */
+.card .btn {
+  padding: 0.5rem 0.9rem;
+  font: inherit;
+  font-size: 0.9rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+
+.card .btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.card .btn--full {
+  width: 100%;
+}
+
+.card .btn--primary {
+  background: #2563eb;
+  color: #fff;
+}
+
+.card .btn--primary:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.card .btn--success {
+  background: #16a34a;
+  color: #fff;
+}
+
+.card .btn--success:hover:not(:disabled) {
+  background: #15803d;
+}
+
+/* --- כפתור מחיקת פריט (X) --- */
+.btn-x {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  font-size: 0.75rem;
+  line-height: 1;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #9ca3af;
+  cursor: pointer;
+}
+
+.btn-x:hover {
+  background: #fee2e2;
+  color: #dc2626;
+}
